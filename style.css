@@ -1,0 +1,242 @@
+/* ---------------------- GENEL STİLLER ---------------------- */
+* {
+    font-family: 'roboto', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-image: url(wallhaven-4yz55d.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 700px;
+}
+
+.anabaslik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(233, 203, 173);
+}
+
+.colum {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 500px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------------------- INPUT & BUTTON STİLLERİ ---------------------- */
+.inpBook {
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    border-style: none;
+    background-color: rgb(250, 235, 215);
+    margin: -40px 0 30px;
+    text-align: center;
+    outline: none;
+}
+
+.inpBook:focus {
+    box-shadow: inset 2px 2px 20px rgb(225, 158, 91);
+}
+
+.inpBook:hover {
+    cursor: text;
+}
+
+.btnFoundBook {
+    height: 45px;
+    width: 150px;
+    margin: 10px 0 -20px;
+    color: rgb(3, 3, 3);
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgb(149, 157, 163);
+    font-size: 15px;
+    font-weight: 540;
+}
+
+.btnFoundBook:not(:disabled):hover {
+    box-sizing: content-box;
+    box-shadow: 0 15px 18px rgba(65, 56, 56, 0.6);
+}
+
+.btnFoundBook:not(:disabled):active {
+    background-color: rgb(75, 75, 110);
+    color: #fff;
+}
+
+.btnFoundBook[disabled] {
+    background-color: rgb(190, 190, 190);
+}
+
+/* ---------------------- RESULT STİLLERİ ---------------------- */
+#result {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+#result p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+#result strong {
+    color: #FFD700;
+    font-size: 18px;
+}
+
+#result span {
+    font-size: 14px;
+    color: #dcdcdc;
+}
+
+.btnClear {
+    height: 40px;
+    width: 120px;
+    margin: 10px 0;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btnClear:hover {
+    background-color: #c0392b;
+}
+
+/* ---------------------- RAF TASARIMI ---------------------- */
+.kitaplıklarr {
+    background-color: #dacccb;
+    width: 680px;
+    height: 631px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(173, 173, 229);
+    border-radius: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.romann > p, .masall > p {
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+    text-align: left;
+    margin-left: 15px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.Tur {
+    display: flex;
+    width: 660px;
+    height: 100px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.kitapp {
+    margin-right: 20px;
+    width: 150px;
+    background-color: #f0f0f0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kitapp:first-child {
+    margin-left: 10px;
+}
+
+.h1Book {
+    font-family: 'Roboto', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/* ---------------------- SLIDER STİLLERİ ---------------------- */
+.slider-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.slider-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #aaa;
+    color: #fff;
+}
+
+.slider-buttons button:hover {
+    background-color: #888;
+}
+
+/* ---------------------- KİTAP İLE İLGİLİ STİLLER ---------------------- */
+.kitapp.found-book {
+    background-color: gold !important;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.kitapp:hover {
+    background-color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* ---------------------- RESPONSİVE DÜZENLEMELER ---------------------- */
+@media (min-width: 480px) {
+    .kitaplıklarr {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .kitaplıklarr {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .kitaplıklarr {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .kitaplıklarr {
+        grid-template-columns: repeat(7, 1fr);
+    }
+}

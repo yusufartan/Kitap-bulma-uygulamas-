@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Bulma Uygulaması</title>
+    <link rel="Website icon" type="png" href="bookshelf.png">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <h1 class="anabaslik">Kütüphaneye Hoşgeldiniz</h1>
+    <div class="container">
+        <div class="colum">
+            <input class="inpBook" type="text" id="inpSearch" placeholder="Aramak istediğiniz kitabı giriniz" required>
+            <div id="result"></div>
+        </div>
+        <div class="buttton">
+            <button class="btnFoundBook" id="findBookButton" disabled>Kitabı Bul</button>
+            <button class="btnClear" id="clearResultButton">Temizle</button>
+        </div>
+    </div>
+
+    <div class="slider-buttons">
+        <button onclick="showCategory('romann')">Roman</button>
+        <button onclick="showCategory('masall')">Masal</button>
+    </div>
+
+    <div class="kitaplıklarr">
+        <div class="romann category">
+            <h1 class="h1Book">Roman</h1>
+    
+            <p>3. Raf Polisiye</p>
+            <div class="Tur" data-category="roman" data-raf="3">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+    
+            <p>2. Raf Dram</p>
+            <div class="Tur" data-category="roman" data-raf="2">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+    
+            <p>1. Raf Psikoloji</p>
+            <div class="Tur" data-category="roman" data-raf="1">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+        </div>
+    
+        <div class="masall category" style="display: none;">
+            <h1 class="h1Book">Masal</h1>
+    
+            <p>3. Raf</p>
+            <div class="Tur" data-category="masal" data-raf="3">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+    
+            <p>2. Raf</p>
+            <div class="Tur" data-category="masal" data-raf="2">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+    
+            <p>1. Raf</p>
+            <div class="Tur" data-category="masal" data-raf="1">
+                <div class="kitapp" data-sira="1"></div>
+                <div class="kitapp" data-sira="2"></div>
+                <div class="kitapp" data-sira="3"></div>
+                <div class="kitapp" data-sira="4"></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
